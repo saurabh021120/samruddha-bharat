@@ -21,13 +21,13 @@ export default function Home() {
         />
       </Head>
 
-      <header className="bg-blue-900 text-white shadow-md">
+      <header className="bg-blue-900 text-white shadow-md header-enhanced">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           {/* Left Section: Burger + Logo */}
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="focus:outline-none"
+              className="focus:outline-none burger-button"
             >
               {/* New Hamburger Icon */}
               <svg
@@ -59,16 +59,13 @@ export default function Home() {
 
         {/* Sidebar Menu */}
         <div
-          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 h-full w-64 shadow-lg z-50 transform transition-transform duration-300 ease-in-out sidebar-menu ${
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="p-6">
             <h2 className="text-xl font-bold text-blue-900 mb-6">Menu</h2>
             <nav className="flex flex-col space-y-4 text-blue-800">
-              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
-                About
-              </Link>
               <Link
                 href="/profileTrustees"
                 onClick={() => setIsMenuOpen(false)}
@@ -85,32 +82,34 @@ export default function Home() {
 
       {/* Hero Section */}
       <main
-        className="container mx-auto px-4 py-16 text-center bg-cover bg-center main-home-section"
+        className="container mx-auto px-4 py-16 text-center bg-cover bg-center main-home-section hero-section"
         style={{ backgroundImage: "url('/images/slide-2.jpg')" }}
       >
-        <h2 className="text-8xl font-bold mb-4 text-white hero-text">
-          Link India
-        </h2>
-        <p className="text-lg max-w-2xl mx-auto mb-8 text-white ">
-          Bridging Ideas, Informing Action
-        </p>
-        <Link
-          href="#join"
-          className="inline-block bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800 transition get-involved"
-        >
-          Get Involved
-        </Link>
+        <div className="hero-content">
+          <h2 className="text-8xl font-bold mb-4 text-white hero-text hero-title">
+            Link India
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8 text-white hero-subtitle">
+            Bridging Ideas, Informing Action
+          </p>
+          <Link
+            href="#join"
+            className="inline-block bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800 transition get-involved cta-button"
+          >
+            Get Involved
+          </Link>
+        </div>
       </main>
 
       {/* About Section */}
-      <section id="about" className="bg-white py-16">
+      <section id="about" className="bg-white py-16 section-enhanced">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-10">
           {/* Left - Text */}
           <div className="md:w-1/2">
-            <h3 className="text-4xl font-extrabold text-blue-900 mb-6">
+            <h3 className="text-4xl font-extrabold text-blue-900 mb-6 section-title">
               About Link India
             </h3>
-            <div className="text-blue-800 space-y-4">
+            <div className="text-blue-800 space-y-4 enhanced-text">
               <p>
                 Link India is a London-based policy think tank dedicated to
                 strengthening economic and cultural relations between the United
@@ -145,10 +144,10 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section id="vision" className="bg-blue-900 py-32 text-center">
+      <section id="vision" className="bg-blue-900 py-32 text-center section-enhanced">
         <div className="container mx-auto px-4">
-          <h3 className="text-4xl font-extrabold text-white mb-4">VISION</h3>
-          <p className="text-white text-lg max-w-3xl mx-auto">
+          <h3 className="text-4xl font-extrabold text-white mb-4 section-title">VISION</h3>
+          <p className="text-white text-lg max-w-3xl mx-auto enhanced-text">
             <i>
               To support evidence-based policymaking that deepens UK–India
               cooperation across economic, educational, and cultural domains.
@@ -158,13 +157,13 @@ export default function Home() {
       </section>
 
       {/* Purpose Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-20 section-enhanced">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-4xl font-extrabold text-blue-900 mb-6">
+            <h3 className="text-4xl font-extrabold text-blue-900 mb-6 section-title">
               Purpose
             </h3>
-            <div className="text-blue-800 text-lg space-y-6 leading-relaxed">
+            <div className="text-blue-800 text-lg space-y-6 leading-relaxed enhanced-text">
               <p>
                 To generate evidence-based insights and policy recommendations
                 that advance economic cooperation.
@@ -188,14 +187,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="join" className="bg-blue-800 text-white py-16">
+      <section id="join" className="bg-blue-800 text-white py-16 section-enhanced">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-4xl font-extrabold text-white mb-6">Join Us</h3>
-          <p className="max-w-2xl mx-auto mb-8">
+          <h3 className="text-4xl font-extrabold text-white mb-6 section-title">Join Us</h3>
+          <p className="max-w-2xl mx-auto mb-8 enhanced-text">
             Sign up to receive email updates on our initiatives, programs, and
             special announcements.
           </p>
-          <form className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
+          <form className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-black form-enhanced">
             <input
               type="text"
               placeholder="Name"
@@ -221,17 +220,17 @@ export default function Home() {
               className="w-full p-2 rounded col-span-1 bg-white text-black md:col-span-2"
               rows="4"
             ></textarea>
-            <div className="col-span-1 md:col-span-2 flex justify-center gap-4 text-white">
-              <label>
+            <div className="col-span-1 md:col-span-2 flex justify-center gap-4 text-white radio-group">
+              <label className="radio-item">
                 <input type="radio" name="role" className="mr-1" /> Volunteer
               </label>
-              <label>
+              <label className="radio-item">
                 <input type="radio" name="role" className="mr-1" /> Intern
               </label>
-              <label>
+              <label className="radio-item">
                 <input type="radio" name="role" className="mr-1" /> Contribute
               </label>
-              <label>
+              <label className="radio-item">
                 <input type="radio" name="role" className="mr-1" /> Suggest
               </label>
             </div>
@@ -249,7 +248,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer
-        className="bg-white text-black py-8"
+        className="bg-white text-black py-8 footer-enhanced"
         style={{ backgroundImage: "url('/images/footer-bg.png')" }}
       >
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
