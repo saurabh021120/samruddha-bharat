@@ -67,6 +67,12 @@ export default function Home() {
             <h2 className="text-xl font-bold text-blue-900 mb-6">Menu</h2>
             <nav className="flex flex-col space-y-4 text-blue-800">
               <Link
+                href="/publications"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Publications
+              </Link>
+              <Link
                 href="/profileTrustees"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -133,11 +139,11 @@ export default function Home() {
           </div>
 
           {/* Right - Image */}
-          <div className="md:w-1/2">
+          <div className="md:w-100 md:ml-40">
             <img
-              src="/images/slide-2.jpg" // Replace with your actual image path
+              src="/images/sam-logo.png" // Replace with your actual image path
               alt="About Link India"
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-96 object-cover"
             />
           </div>
         </div>
