@@ -89,7 +89,7 @@ export default function Home() {
       {/* Hero Section */}
       <main
         className="container mx-auto px-4 py-16 text-center bg-cover bg-center main-home-section hero-section"
-        style={{ backgroundImage: "url('/images/slide-2.jpg')" }}
+        style={{ backgroundImage: "url('/images/home-1.jpg')" }}
       >
         <div className="hero-content">
           <h2 className="text-8xl font-bold mb-4 text-white hero-text hero-title">
@@ -309,6 +309,20 @@ export default function Home() {
         </div>
         <div className="text-center mt-6">
           &copy; {new Date().getFullYear()} Link India. All rights reserved.
+        </div>
+        
+        {/* Charity Information */}
+        <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd" />
+              </svg>
+              <span className="font-semibold text-sm">
+                Link India is a Charitable Incorporated Organisation with charity number 1183696
+              </span>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
